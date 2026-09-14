@@ -1,0 +1,37 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "redirects": [
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/quote", "destination": "/estimate", "permanent": true },
+    { "source": "/free-quote", "destination": "/estimate", "permanent": true },
+    { "source": "/free-estimate", "destination": "/estimate", "permanent": true },
+    { "source": "/get-a-quote", "destination": "/estimate", "permanent": true },
+    { "source": "/areas", "destination": "/service-areas", "permanent": true },
+    { "source": "/locations", "destination": "/service-areas", "permanent": true },
+    { "source": "/work", "destination": "/gallery", "permanent": true },
+    { "source": "/portfolio", "destination": "/gallery", "permanent": true },
+    { "source": "/projects", "destination": "/gallery", "permanent": true },
+    { "source": "/testimonials", "destination": "/reviews", "permanent": true },
+    { "source": "/faqs", "destination": "/faq", "permanent": true },
+
+    { "source": "/concrete-contractor-chicago-il", "destination": "/service-areas/chicago-il", "permanent": true },
+    { "source": "/concrete-contractor-hinsdale-il", "destination": "/service-areas/hinsdale-il", "permanent": true },
+    { "source": "/concrete-contractor-oak-brook-il", "destination": "/service-areas/oak-brook-il", "permanent": true },
+    { "source": "/concrete-patio-installation-elmhurst-il", "destination": "/services/concrete-patios", "permanent": true },
+    { "source": "/concrete-ramp-installation-elmhurst-il", "destination": "/services/concrete-ramps", "permanent": true },
+    { "source": "/brick-paver-patios-elmhurst-il", "destination": "/services/brick-paver-patios", "permanent": true },
+    { "source": "/brick-paver-driveways-elmhurst-il", "destination": "/services/brick-paver-driveways", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
+  ]
+}
