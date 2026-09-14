@@ -94,16 +94,19 @@ export const FAQS = [
 // Project gallery. `photo` stays null until real job photography is supplied;
 // the card renders a styled placeholder rather than a stock image of someone
 // else's work.
+// `art` is the drawn scene shown until a real photo is registered, so the
+// gallery reads as finished rather than as a wall of empty slots. Set `photo`
+// to a key from data/photos.js and the photograph takes over.
 export const GALLERY = [
-  { t: 'Stamped ashlar patio', where: 'Elmhurst, IL', tag: 'Stamped', ratio: '4 / 5', photo: null },
-  { t: 'Driveway replacement, two-car', where: 'Lombard, IL', tag: 'Driveway', ratio: '4 / 3', photo: null },
-  { t: 'Paver patio with seat wall', where: 'Hinsdale, IL', tag: 'Pavers', ratio: '1 / 1', photo: null },
-  { t: 'Front walk and stoop', where: 'Villa Park, IL', tag: 'Walkway', ratio: '4 / 3', photo: null },
-  { t: 'Exposed aggregate patio', where: 'Oak Brook, IL', tag: 'Patio', ratio: '4 / 5', photo: null },
-  { t: 'Garage slab and apron', where: 'Berwyn, IL', tag: 'Slab', ratio: '4 / 3', photo: null },
-  { t: 'Segmental retaining wall', where: 'Glen Ellyn, IL', tag: 'Wall', ratio: '1 / 1', photo: null },
-  { t: 'Accessible entrance ramp', where: 'Downers Grove, IL', tag: 'Ramp', ratio: '4 / 3', photo: null },
-  { t: 'Herringbone paver driveway', where: 'La Grange, IL', tag: 'Pavers', ratio: '4 / 5', photo: null },
+  { t: 'Stamped ashlar patio', where: 'Elmhurst, IL', tag: 'Stamped', ratio: '4 / 5', art: 'stamped', photo: null },
+  { t: 'Driveway replacement, two-car', where: 'Lombard, IL', tag: 'Driveway', ratio: '4 / 3', art: 'driveway', photo: null },
+  { t: 'Paver patio with seat wall', where: 'Hinsdale, IL', tag: 'Pavers', ratio: '1 / 1', art: 'paverPatio', photo: null },
+  { t: 'Front walk and stoop', where: 'Villa Park, IL', tag: 'Walkway', ratio: '4 / 3', art: 'walkway', photo: null },
+  { t: 'Concrete patio, broom finish', where: 'Oak Brook, IL', tag: 'Patio', ratio: '4 / 5', art: 'patio', photo: null },
+  { t: 'Garage slab and apron', where: 'Berwyn, IL', tag: 'Slab', ratio: '4 / 3', art: 'slab', photo: null },
+  { t: 'Segmental retaining wall', where: 'Glen Ellyn, IL', tag: 'Wall', ratio: '1 / 1', art: 'wall', photo: null },
+  { t: 'Accessible entrance ramp', where: 'Downers Grove, IL', tag: 'Ramp', ratio: '4 / 3', art: 'ramp', photo: null },
+  { t: 'Herringbone paver driveway', where: 'La Grange, IL', tag: 'Pavers', ratio: '4 / 5', art: 'paverDrive', photo: null },
 ];
 
 // ⚠️ Reviews are deliberately empty. Publishing invented testimonials on a

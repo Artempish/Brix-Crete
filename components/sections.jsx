@@ -166,7 +166,9 @@ export function GalleryGrid({ items = GALLERY }) {
               {p
                 ? <img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                : <div className="photo-slot" style={{ height: '100%' }}><span>Photo pending</span></div>}
+                : g.art
+                  ? <Art name={g.art} />
+                  : <div className="photo-slot" style={{ height: '100%' }}><span>Photo pending</span></div>}
             </div>
             <figcaption className="gal__cap">
               <strong>{g.t}</strong>

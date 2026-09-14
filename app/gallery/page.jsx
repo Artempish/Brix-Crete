@@ -34,10 +34,11 @@ export default function GalleryPage() {
             <p className="row small" style={{ '--gap': '11px', alignItems: 'flex-start', flexWrap: 'nowrap', margin: 0 }}>
               <span style={{ marginTop: 2, color: 'hsl(var(--clay))' }}><Info s={16} /></span>
               <span>
-                <strong style={{ color: 'hsl(var(--ink))' }}>Photography pending. </strong>
-                Rather than fill this page with stock images of somebody else&rsquo;s concrete,
-                the slots below are waiting on real job photos. Ask us for references and
-                addresses in the meantime — we are happy to give them.
+                <strong style={{ color: 'hsl(var(--ink))' }}>These are illustrations, not photographs. </strong>
+                We would rather draw the work than fill this page with stock images of
+                somebody else&rsquo;s concrete. Real job photography is going up here shortly —
+                in the meantime, ask us for addresses near you and go and look at the
+                actual slabs.
               </span>
             </p>
           </div>
