@@ -24,7 +24,7 @@ export function localBusinessNode() {
     email: BUSINESS.email,
     description: BUSINESS.tagline,
     image: `${U}/og.png`,
-    logo: `${U}/icon.svg`,
+    logo: BUSINESS.logo?.src ? `${U}${BUSINESS.logo.src}` : `${U}/icon.svg`,
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',

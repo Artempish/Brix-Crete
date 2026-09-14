@@ -65,11 +65,25 @@ The body contains every field plus a preformatted `summary` string.
 
 ### Photos
 
-Drop files in `public/photos/`, register them in `data/photos.js`, then
-reference the key from `data/services.js` (`photo:`) or `data/content.js`
-(`GALLERY[].photo`). Until a key is registered, the component renders the drawn
-artwork for that service — the site never shows stock images of someone else's
-concrete. Full instructions in `public/photos/README.md`.
+```bash
+# 1. drop image files into public/photos/
+# 2. register them all in one go
+node scripts/register-photos.mjs
+# 3. rewrite the generated alt text (search data/photos.js for "TODO describe")
+# 4. reference the keys from data/services.js (photo:) or data/content.js (GALLERY[].photo)
+```
+
+The script is safe to re-run — it preserves alt text you have already written.
+Until a key is registered, the component renders the drawn artwork for that
+service, so the site never shows stock images of someone else's concrete.
+Conventions in `public/photos/README.md`.
+
+### Logo
+
+Drop the file in `public/brand/` and point `BUSINESS.logo.src` at it. It then
+replaces the drawn brand mark in the header, mobile menu, footer and schema
+automatically. See `public/brand/README.md` — prefer the original vector file
+over a copy scraped from the old site.
 
 ---
 

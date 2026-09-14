@@ -39,6 +39,14 @@ export const BUSINESS = {
   rating: null,                       // REPLACE e.g. { value: 4.9, count: 87 }
   licenseNote: 'Licensed & insured — certificate available on request.',
 
+  // Real logo file. Drop it in public/brand/ and point `src` at it, and it
+  // replaces the drawn brand mark in the header, the footer and the schema.
+  // Leave src null and the built-in mark is used instead.
+  //   logo: { src: '/brand/logo.svg', w: 180, h: 44, markOnly: '/brand/mark.svg' }
+  // `markOnly` is optional — a square/icon-only version for tight spots. If it
+  // is omitted the full logo is used everywhere.
+  logo: { src: null, w: 0, h: 0, markOnly: null },
+
   socials: [
     // REPLACE with real profile URLs, or delete the row to hide the icon
     { label: 'Facebook', href: '', icon: 'facebook' },

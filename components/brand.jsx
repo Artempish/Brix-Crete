@@ -1,7 +1,27 @@
-// Brand mark: a square split on the diagonal — running-bond brick on one side,
-// a jointed concrete slab on the other. The whole business in one tile.
+// Brand mark.
+//
+// If a real logo file is registered at BUSINESS.logo.src it is used. Otherwise
+// this falls back to a drawn mark: a square split on the diagonal —
+// running-bond brick on one side, a jointed concrete slab on the other.
+
+import { BUSINESS } from '@/data/business';
 
 export function BrandMark({ s = 34 }) {
+  const mark = BUSINESS.logo?.markOnly || BUSINESS.logo?.src;
+  if (mark) {
+    return (
+      <img
+        src={mark}
+        alt=""
+        height={s}
+        style={{ height: s, width: 'auto', flex: 'none' }}
+      />
+    );
+  }
+  return <DrawnMark s={s} />;
+}
+
+function DrawnMark({ s = 34 }) {
   return (
     <svg width={s} height={s} viewBox="0 0 40 40" aria-hidden="true" style={{ flex: 'none' }}>
       <defs>
@@ -42,6 +62,19 @@ export function BrandMark({ s = 34 }) {
 }
 
 export function BrandLockup({ s = 34, onDark = false }) {
+  // A full logo file (wordmark included) replaces the whole lockup.
+  if (BUSINESS.logo?.src) {
+    return (
+      <img
+        src={BUSINESS.logo.src}
+        alt={BUSINESS.name}
+        width={BUSINESS.logo.w || undefined}
+        height={BUSINESS.logo.h || undefined}
+        style={{ height: s + 10, width: 'auto', display: 'block' }}
+      />
+    );
+  }
+
   return (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 11 }}>
       <BrandMark s={s} />
